@@ -9,6 +9,14 @@ An Online community application with flutter
 
 
 ## ScreenShots
+# -   Sign up 
+
+![](images/signup.png)
+
+# -   Sign In 
+
+![](images/signin.png)
+
 # -   Home 
 
 ![](images/home.png)
