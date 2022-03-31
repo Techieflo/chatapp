@@ -12,5 +12,7 @@ Future<void> signUp(String email, String password) async {
     } else if (e.code == 'email-already-in-use') {
       print("The email you entered is already in use");
     }
+  } catch (e) {
+    print(e.toString());
   }
 }
