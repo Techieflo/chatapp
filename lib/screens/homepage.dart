@@ -1,4 +1,6 @@
+import 'package:closameet/screens/discuss.dart';
 import 'package:closameet/screens/homebody.dart';
+import 'package:closameet/screens/profile.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -9,6 +11,16 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int selectedindex = 0;
+  int _index = 0;
+  bool isgreencolor = false;
+  late int index;
+  List<StatefulWidget> widgetsOptions = [
+    const Homebody(),
+    const Discuss(),
+    const Profile(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
