@@ -1,3 +1,4 @@
+import 'package:closameet/screens/homebody.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,19 +12,20 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        body: const Homebody(),
         bottomNavigationBar: BottomNavigationBar(items: const [
-      BottomNavigationBarItem(
-        icon: Icon(Icons.home),
-        label: "Home",
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.messenger),
-        label: "Discuss",
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.person),
-        label: "Profile",
-      ),
-    ]));
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.messenger),
+            label: "Discuss",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profile",
+          ),
+        ]));
   }
 }
