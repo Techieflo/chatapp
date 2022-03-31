@@ -143,7 +143,7 @@ class _HomebodyState extends State<Homebody> {
                                         )
                                       ]),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 )
                               ],

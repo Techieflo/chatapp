@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453972592466",
+    "project_id": "test-project-f1a83",
+    "storage_bucket": "test-project-f1a83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453972592466:android:acd6e1efd3f8ea31029c8b",
+        "android_client_info": {
+          "package_name": "com.example.closameet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453972592466-pjevd8q2sunpqoev3tkpmpb5egsp8suf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoR8yeD4nFsK0TeHGbJQosSKhIUjq1sf0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453972592466-pjevd8q2sunpqoev3tkpmpb5egsp8suf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
