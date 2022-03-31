@@ -158,9 +158,9 @@ class _SignupState extends State<Signup> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   onPressed: () {
-                    signIn(email_control.text.trim(),
+                    signUp(email_control.text.trim(),
                         password_control.text.trim());
-                    print(FirebaseAuth.instance.currentUser!.email.toString());
+                    print(FirebaseAuth.instance.currentUser.toString());
                   },
                 ),
               ),
