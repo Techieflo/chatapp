@@ -84,322 +84,75 @@ class _HomebodyState extends State<Homebody> {
                 margin: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * 0.16, left: 5),
                 height: MediaQuery.of(context).size.height,
-                child: ListView(
-                  children: [
-                    const Text(
-                      "Trending Stories...",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    //scrollable horizontal view
-                    const SizedBox(height: 15),
-                    Container(
-                      height: 100,
+                child: ListView(children: [
+                  const Text(
+                    "Trending Stories...",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  //scrollable horizontal view
+                  const SizedBox(height: 15),
+                  Container(
+                      height: MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).size.width,
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //crossAxisAlignment: CrossAxisAlignment.start,
-
-                          children: [
-                            //
-                            const SizedBox(width: 10),
-                            //
-                            GestureDetector(
-                              onTap: () {
-                                setState(() => _index = 1);
-                              },
-                              child: Container(
-                                width: 100,
-                                height: 116,
-                                decoration: BoxDecoration(
-                                  color: _index == 1
-                                      ? const Color.fromRGBO(13, 172, 10, 1)
-                                      : const Color.fromRGBO(235, 235, 235, 1),
-                                  border: Border.all(
-                                    width: 2,
-                                    color: Colors
-                                        .grey.shade300, // red as border color``
+                      child: ListView.builder(
+                          itemCount: 10,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Column(
+                              children: [
+                                Container(
+                                  width: double.infinity,
+                                  height: 200,
+                                  decoration: BoxDecoration(
+                                    color: _index == 1
+                                        ? Colors.blue
+                                        : const Color.fromRGBO(
+                                            235, 235, 235, 1),
+                                    border: Border.all(
+                                      width: 2,
+                                      color: Colors.grey
+                                          .shade300, // red as border color``
+                                    ),
+                                    borderRadius: const BorderRadius.all(
+                                      Radius.circular(10.0),
+                                    ),
                                   ),
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(10.0),
-                                  ),
+                                  child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Center(
+                                          child: Image.asset(
+                                            'assets/images/onBoardScreenImage2.png',
+                                            width: 100,
+                                            height: 40,
+                                          ),
+                                        ),
+                                        Center(
+                                          child: Text(
+                                            'Clothes',
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                color: _index == 1
+                                                    ? const Color.fromRGBO(
+                                                        235, 235, 235, 1)
+                                                    : const Color.fromRGBO(
+                                                        0, 0, 0, 0.5)),
+                                          ),
+                                        )
+                                      ]),
                                 ),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Center(
-                                        child: Image.asset(
-                                          'assets/images/card1.png',
-                                          width: 38.91,
-                                          height: 40,
-                                          color: _index == 1
-                                              ? Colors.white
-                                              : Colors.black,
-                                        ),
-                                      ),
-                                      Center(
-                                        child: Text(
-                                          'Clothes',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: _index == 1
-                                                  ? const Color.fromRGBO(
-                                                      235, 235, 235, 1)
-                                                  : const Color.fromRGBO(
-                                                      0, 0, 0, 0.5)),
-                                        ),
-                                      )
-                                    ]),
-                              ),
-                            ),
-                            //
-                            const SizedBox(width: 10),
-                            //
-                            //
-                            GestureDetector(
-                              onTap: () {
-                                setState(() => _index = 2);
-                              },
-                              child: Container(
-                                width: 100,
-                                height: 116,
-                                decoration: BoxDecoration(
-                                  color: _index == 2
-                                      ? const Color.fromRGBO(13, 172, 10, 1)
-                                      : const Color.fromRGBO(235, 235, 235, 1),
-                                  border: Border.all(
-                                    width: 2,
-                                    color: Colors
-                                        .grey.shade300, // red as border color
-                                  ),
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(10.0),
-                                  ),
-                                ),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Center(
-                                        child: Image.asset(
-                                          'assets/images/card2.png',
-                                          width: 38.91,
-                                          height: 40,
-                                          color: _index == 2
-                                              ? Colors.white
-                                              : Colors.black,
-                                        ),
-                                      ),
-                                      Center(
-                                        child: Text(
-                                          'Sneakers',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: _index == 2
-                                                  ? Color.fromRGBO(
-                                                      235, 235, 235, 1)
-                                                  : Color.fromRGBO(
-                                                      0, 0, 0, 0.5)),
-                                        ),
-                                      )
-                                    ]),
-                              ),
-                            ),
-                            //
-                            SizedBox(width: 10),
-                            //
-                            //
-                            GestureDetector(
-                              onTap: () {
-                                setState(() => _index = 3);
-                              },
-                              child: Container(
-                                width: 100,
-                                height: 116,
-                                decoration: BoxDecoration(
-                                  color: _index == 3
-                                      ? const Color.fromRGBO(13, 172, 10, 1)
-                                      : const Color.fromRGBO(235, 235, 235, 1),
-                                  border: Border.all(
-                                    width: 2,
-                                    color: Colors
-                                        .grey.shade300, // red as border color
-                                  ),
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(10.0),
-                                  ),
-                                ),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Center(
-                                        child: Image.asset(
-                                          'assets/images/card0.png',
-                                          width: 38.91,
-                                          height: 40,
-                                          color: _index == 3
-                                              ? Colors.white
-                                              : Colors.black,
-                                        ),
-                                      ),
-                                      Center(
-                                        child: Text(
-                                          'Best Deals',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: _index == 3
-                                                  ? const Color.fromRGBO(
-                                                      235, 235, 235, 1)
-                                                  : const Color.fromRGBO(
-                                                      0, 0, 0, 0.5)),
-                                        ),
-                                      )
-                                    ]),
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            GestureDetector(
-                              onTap: () {
-                                setState(() => _index = 1);
-                              },
-                              child: Container(
-                                width: 100,
-                                height: 116,
-                                decoration: BoxDecoration(
-                                  color: _index == 1
-                                      ? Color.fromRGBO(13, 172, 10, 1)
-                                      : Color.fromRGBO(235, 235, 235, 1),
-                                  border: Border.all(
-                                    width: 2,
-                                    color: Colors
-                                        .grey.shade300, // red as border color
-                                  ),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10.0),
-                                  ),
-                                ),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Center(
-                                        child: Image.asset(
-                                          'assets/images/card1.png',
-                                          width: 38.91,
-                                          height: 40,
-                                          color: _index == 1
-                                              ? Colors.white
-                                              : Colors.black,
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        width: 20,
-                                      ),
-                                      Center(
-                                        child: Text(
-                                          'Clothes',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: _index == 1
-                                                  ? const Color.fromRGBO(
-                                                      235, 235, 235, 1)
-                                                  : const Color.fromRGBO(
-                                                      0, 0, 0, 0.5)),
-                                        ),
-                                      )
-                                    ]),
-                              ),
-                            ),
-                            //
-                            const SizedBox(width: 10),
-                            //
+                                SizedBox(
+                                  height: 15,
+                                )
+                              ],
+                            );
+                          })
 
-                            //
-                            //
-
-                            //
-                          ],
-                        ),
-                      ),
-                    ), //
-
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    //, near you
-                    Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text('Top Items near you',
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            Text(
-                              "SEE ALL",
-                              style: TextStyle(
-                                  fontFamily: "Roboto",
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-
-                    //top items option
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.25,
-                    ),
-
-                    //browse shops near you
-                    Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text('Browse shops near you',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
-                                    letterSpacing: 0.5,
-                                    color: Colors.black)),
-                            Text(
-                              "SEE ALL",
-                              style: TextStyle(
-                                  fontFamily: "Roboto",
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-
-                    //top items option
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.25,
-                    ),
-                  ],
-                ),
+                      // ),
+                      )
+                ]),
               )
             ],
           ),
