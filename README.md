@@ -17,6 +17,6 @@ An Online community application with flutter
 
 ![](images/discussion.png)
 
-#- Account Settings
-- 
+# - Account Settings
+ 
 ![](images/profile.png)
