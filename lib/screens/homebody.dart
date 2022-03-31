@@ -21,92 +21,76 @@ class _HomebodyState extends State<Homebody> {
           child: Stack(
             children: [
               Column(children: [
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Hello Nikemi,',
-                            style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black),
-                          ),
-                          Text(
-                            'Let\'s get something for you!!!',
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey),
-                          ),
-                        ],
+                Row(children: [
+                  const CircleAvatar(
+                    radius: 20,
+                    backgroundImage:
+                        AssetImage('assets/images/onBoardScreenImage2.png'),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        '  Olaniyan Favour',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black),
                       ),
-                      const CircleAvatar(
-                        backgroundImage: AssetImage('assets/images/pp.png'),
-                      ),
-                    ]),
+                      // Text(
+                      //   'Let\'s get something for you!!!',
+                      //   style: TextStyle(
+                      //       fontSize: 14,
+                      //       fontWeight: FontWeight.w400,
+                      //       color: Colors.grey),
+                      // ),
+                    ],
+                  ),
+                ]),
                 //search bar
 
                 const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  //height: 100,
+                  margin: EdgeInsets.only(right: 5, left: 5),
+                  height: 50,
                   width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // TextFormField(
-                      //   decoration: InputDecoration(suffixIcon: Icon(Icons.search)),
-                      // ),
-                      Container(
-                        height: 50,
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(70, 143, 142, 142),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: const TextField(
-                          decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search),
-                            prefixIconColor: Colors.black,
-                            hintText: 'Search more',
-                            hintStyle: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontStyle: FontStyle.italic,
-                            ),
-                            border: InputBorder.none,
-                          ),
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(70, 170, 170, 170),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: const TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.search),
+                      prefixIconColor: Colors.black,
+                      hintText: 'Search Latest Update',
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
                       ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(70, 163, 162, 162),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: const Icon(Icons.location_city),
-                      ),
-                    ],
+                      border: InputBorder.none,
+                    ),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ]),
               Container(
                 margin: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.16),
+                    top: MediaQuery.of(context).size.height * 0.16, left: 5),
                 height: MediaQuery.of(context).size.height,
                 child: ListView(
                   children: [
-                    Image(
-                        fit: BoxFit.fill,
-                        height: MediaQuery.of(context).size.height * 0.15,
-                        width: MediaQuery.of(context).size.width,
-                        image: const AssetImage('assets/images/ad.png')),
+                    const Text(
+                      "Trending Stories...",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
                     //scrollable horizontal view
                     const SizedBox(height: 15),
                     Container(

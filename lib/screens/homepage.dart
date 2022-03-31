@@ -42,6 +42,7 @@ class _HomeState extends State<Home> {
           ],
           currentIndex: selectedindex,
           onTap: onitemtaped,
+          showUnselectedLabels: false,
         ));
   }
 
