@@ -10,6 +10,11 @@ class Discuss extends StatefulWidget {
 class _DiscussState extends State<Discuss> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 2,
+        title: const Text("Discussion"),
+      ),
+    );
   }
 }
