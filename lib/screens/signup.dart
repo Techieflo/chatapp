@@ -1,4 +1,6 @@
+import 'package:closameet/flutterfire/flutterfire.dart';
 import 'package:closameet/screens/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatefulWidget {
@@ -155,7 +157,11 @@ class _SignupState extends State<Signup> {
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    signIn(email_control.text.trim(),
+                        password_control.text.trim());
+                    print(FirebaseAuth.instance.currentUser!.email.toString());
+                  },
                 ),
               ),
               Container(
