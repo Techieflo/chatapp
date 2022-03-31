@@ -9,4 +9,7 @@ An Online community application with flutter
 
 
 ## ScreenShots
+- Discussion 
 ![](images/discussion.png)
+- Account Settings
+![](images/settings.png)
