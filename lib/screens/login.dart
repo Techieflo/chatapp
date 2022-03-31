@@ -1,6 +1,8 @@
 import 'package:closameet/screens/signup.dart';
 import 'package:flutter/material.dart';
 
+import 'homepage.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -107,7 +109,10 @@ class _LoginState extends State<Login> {
                         fontWeight: FontWeight.bold,
                         fontSize: 17),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => const Home()));
+                  },
                 ),
               ),
               Container(
