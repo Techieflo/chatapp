@@ -24,20 +24,31 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: const Homebody(),
-        bottomNavigationBar: BottomNavigationBar(items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.messenger),
-            label: "Discuss",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
-          ),
-        ]));
+        body: widgetsOptions[selectedindex],
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.messenger),
+              label: "Discuss",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Profile",
+            ),
+          ],
+          currentIndex: selectedindex,
+          onTap: onitemtaped,
+          fixedColor: Colors.grey,
+        ));
+  }
+
+  void onitemtaped(int value) {
+    setState(() {
+      selectedindex = value;
+    });
   }
 }
