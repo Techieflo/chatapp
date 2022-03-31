@@ -1,4 +1,4 @@
-# closameet
+# An Online community app with flutter
 
 A new Flutter project.
 
