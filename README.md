@@ -1,6 +1,6 @@
-# An Online community app with flutter
+# ClosaMeet
 
-A new Flutter project.
+An Online community application with flutter
 
 ## Getting Started
 
