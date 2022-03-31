@@ -9,7 +9,7 @@ An Online community application with flutter
 
 
 ## ScreenShots
--  # Home 
+# -   Home 
 
 ![](images/home.png)
 
