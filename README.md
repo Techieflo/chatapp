@@ -13,10 +13,10 @@ An Online community application with flutter
 
 ![](images/home.png)
 
--#  Discussion 
+# - Discussion 
 
 ![](images/discussion.png)
 
-- #Account Settings
+#- Account Settings
 - 
 ![](images/profile.png)
